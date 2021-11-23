@@ -209,7 +209,7 @@ alias rb="reboot"
 #Functions
 ########
 git () {
-        if [ "$1" = "log" ]; then
+        if [ "$1" = "l" ]; then
                 command git log --oneline --graph
         else
                 command git "$@"
