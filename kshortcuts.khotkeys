@@ -4,7 +4,7 @@ DataCount=1
 [Data_1]
 Comment=A list of my custom shortcuts!
 DataCount=4
-Enabled=false
+Enabled=true
 Name=My shortcuts
 SystemGroup=0
 Type=ACTION_DATA_GROUP
@@ -14,16 +14,16 @@ Comment=
 ConditionsCount=0
 
 [Data_1_1]
-Comment=Plays a jingle :3
-Enabled=false
-Name=Beep
+Comment=Starts the xfce4 terminal in the desktop folder
+Enabled=true
+Name=Start term
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_1Actions]
 ActionsCount=1
 
 [Data_1_1Actions0]
-CommandURL=lua /home/$USER/Scripts/beep.lua
+CommandURL=xfce4-terminal --working-directory=/home/$USER/Desktop/
 Type=COMMAND_URL
 
 [Data_1_1Conditions]
@@ -35,21 +35,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_1Triggers0]
-Key=Meta+Num+-
+Key=Meta+T
 Type=SHORTCUT
-Uuid={8baad4e1-2863-451b-8cee-513c5fa1625f}
+Uuid={b1af7148-5803-448d-8b1a-475b319f04c9}
 
 [Data_1_2]
-Comment=Starts the xfce4 terminal in the desktop folder
-Enabled=false
-Name=Start term
+Comment=Triggers xkill
+Enabled=true
+Name=xkill
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_2Actions]
 ActionsCount=1
 
 [Data_1_2Actions0]
-CommandURL=xfce4-terminal --working-directory=/home/$USER/Desktop/
+CommandURL=xkill
 Type=COMMAND_URL
 
 [Data_1_2Conditions]
@@ -61,22 +61,23 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_2Triggers0]
-Key=Meta+T
+Key=Ctrl+Alt+Num+Del
 Type=SHORTCUT
-Uuid={b1af7148-5803-448d-8b1a-475b319f04c9}
+Uuid={5b35cb0f-0bad-44a5-a932-30fdc17f7152}
 
 [Data_1_3]
-Comment=Triggers xkill
-Enabled=false
-Name=xkill
+Comment=Comment
+Enabled=true
+Name=Github token
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_3Actions]
 ActionsCount=1
 
 [Data_1_3Actions0]
-CommandURL=xkill
-Type=COMMAND_URL
+DestinationWindow=2
+Input=:g:h:p:Shift+-:Shift+h:u:Shift+G:Shift+K:K:v:o:g:v:a:7:Shift+w:Shift+p:Shift+y:Shift+a:Shift+z:5:e:Shift+y:Shift+b:Shift+q:h:Shift+M:Shift+U:Shift+X:Shift+O:w:1:5:Shift+G:1:u:Shift+X:g:Shift+k:Shift+C:
+Type=KEYBOARD_INPUT
 
 [Data_1_3Conditions]
 Comment=
@@ -87,23 +88,22 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_3Triggers0]
-Key=Ctrl+Alt+Num+Del
+Key=Meta+Num++
 Type=SHORTCUT
-Uuid={5b35cb0f-0bad-44a5-a932-30fdc17f7152}
+Uuid={fe1a97d9-e1cb-446d-8ea5-80108bba9cb0}
 
 [Data_1_4]
-Comment=Comment
-Enabled=false
-Name=Github token
+Comment=Triggers flameshot :3
+Enabled=true
+Name=Flameshot
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_4Actions]
 ActionsCount=1
 
 [Data_1_4Actions0]
-DestinationWindow=2
-Input=:g:h:p:Shift+-:Shift+h:u:Shift+G:Shift+K:K:v:o:g:v:a:7:Shift+w:Shift+p:Shift+y:Shift+a:Shift+z:5:e:Shift+y:Shift+b:Shift+q:h:Shift+M:Shift+U:Shift+X:Shift+O:w:1:5:Shift+G:1:u:Shift+X:g:Shift+k:Shift+C:
-Type=KEYBOARD_INPUT
+CommandURL=flameshot gui
+Type=COMMAND_URL
 
 [Data_1_4Conditions]
 Comment=
@@ -114,9 +114,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_4Triggers0]
-Key=Meta+Num++
+Key=Print
 Type=SHORTCUT
-Uuid={fe1a97d9-e1cb-446d-8ea5-80108bba9cb0}
+Uuid={737389f9-8169-4db5-af61-0aa971e6146c}
 
 [Main]
 AllowMerge=false
