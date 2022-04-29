@@ -1,3 +1,6 @@
+#
+# ~/.bashrc
+#
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -184,18 +187,9 @@ _Pacdiff() {
 #alias pacdiff=_Pacdiff
 alias update=UpdateAllPackages
 ################################################################################
-#Exports
-########
-#Concactenantes /home/USER/bin to PATH to be able to run them without specifying the path
-export PATH=$PATH:$HOME/bin
-################################################################################
-#Neofetch or pfetch
-########
+export PATH=$PATH:/home/razvii/bin
 #neofetch
-pfetch
-################################################################################
-#Aliases
-########
+pfetch | lolcat
 alias rt='clear && bash'
 alias bashrc='nano ~/.bashrc'
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
@@ -204,15 +198,4 @@ alias love='love2d'
 alias cp="cp -i"
 alias debc="ssh Razvii@192.168.0.5"
 alias hack="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
-alias rb="reboot"
-#################################################################################
-#Functions
-########
-git () {
-        if [ "$1" = "l" ]; then
-                command git log --oneline --graph
-        else
-                command git "$@"
-        fi
-}
-#################################################################################
+alias eth="sudo rmmod r8169 && sudo modprobe r8169"
