@@ -1,0 +1,8 @@
+ani-cli-git
+edex-ui-bin
+flameshot-git
+heroic-games-launcher-bin
+obs-studio-git
+pfetch-git
+printrun-git
+telegram-cli-git
